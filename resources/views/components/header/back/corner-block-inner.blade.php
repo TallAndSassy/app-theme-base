@@ -1,5 +1,6 @@
 <span class="
             tassy::page-guide-components-header-corner-block
+
             ">
 
 <img class='w-5  -mt-6 inline-block mr-0 ' id='theBottomSchoolChaseLogo' src='{{asset('/img/logos/applogolod.png')}}'>
