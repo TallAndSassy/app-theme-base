@@ -1,4 +1,4 @@
-<div class="flex bg-gray-100">
+<div class="flex bg-gray-50">
     <div class=" w-18 px-2 pt-2 bg-gray-800">
         <x-tassy::header.back.corner-block/>
     </div>

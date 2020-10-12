@@ -19,4 +19,5 @@
 
         </div>
     </div>
+    {!! phpinfo() !!}
 </x-tassy::page-front>
