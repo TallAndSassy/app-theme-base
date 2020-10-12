@@ -1,4 +1,12 @@
 {{--This is copied directly from jetstream 'resources/views/navigation-dropdown.blade.php'--}}
+
+@php
+ $isLoggedIn = (\Illuminate\Support\Facades\Auth::user()) ? true : false;
+assert($isLoggedIn,"In user-setting-dropdown blade. This is only for logged in screens.  Please check for log in before renderring.")
+ @endphp
+
+
+
 <span class="{{ $attributes->get('class') }}">
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -71,3 +79,4 @@
                     </x-slot>
                 </x-jet-dropdown>
 </span>
+

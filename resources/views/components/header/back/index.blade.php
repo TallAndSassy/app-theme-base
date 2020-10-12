@@ -5,8 +5,5 @@
     <div class="  p-3">
         <x-tassy::header.back.title>{{$title}}</x-tassy::header.back.title>
     </div>
-
-
-
     <x-tassy::header.back.menu/>
 </div>
