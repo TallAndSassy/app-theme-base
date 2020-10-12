@@ -1,1 +1,1 @@
-Hello Skeleton from blade in Spatie/Skeleton/groks/sample_blade
+Hello AppThemeBase from blade in TallAndSassy/AppThemeBase/groks/sample_blade
