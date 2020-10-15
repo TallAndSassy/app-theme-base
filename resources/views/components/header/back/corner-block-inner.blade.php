@@ -8,9 +8,8 @@
     @php
     if (request()->routeIs('admin*') ) {
         $textColor = 'text-gray-200';
-    } elseif (request()->routeIs('me*') ) {
-        $textColor = 'text-gray-800';
     } else {
+        $textColor = 'text-gray-800';
     }
     @endphp
 
