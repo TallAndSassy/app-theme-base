@@ -1,4 +1,5 @@
-<span class="
-    tassy::page-guide.components.header.beack.title
-
-    text-3xl">{{$slot}}</span>
+<div
+    {{ $attributes->merge([
+    'class' => 'tassy::page-guide.components.header.back.title text-3xl']
+    )}}
+>{{$slot}}</div>
