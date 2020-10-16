@@ -1,7 +1,7 @@
 <div>
     <div class="h-16  flex bg-gray-100">
         @if (request()->routeIs('admin*') )
-            <div class="w-13 lg:w-36 xl:w-56 px-2 pt-2 bg-gray-100 md:bg-gray-800">
+            <div class="w-13 lg:w-36 xl:w-56 px-2 pt-2 bg-gray-100 md:bg-gray-900">
                 <x-tassy::header.back.corner-block/>
             </div>
             <div class="hidden md:block  p-3">
