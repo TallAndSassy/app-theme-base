@@ -13,7 +13,7 @@
         It seems to work good-enough.
         --}}
         <div class="flex flex-col h-screen justify-between bg-gray-100 w-screen">
-            <main class="mb-auto  ">Admin Page</main>
+            <main class="mb-auto p-2">{{$slot}}</main>
 
              <div cass="moveFooter "><x-tassy::footer.back.index/></div>
         </div>
