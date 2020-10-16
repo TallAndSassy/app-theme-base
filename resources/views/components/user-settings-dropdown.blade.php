@@ -2,7 +2,8 @@
 
 @php
  $isLoggedIn = (\Illuminate\Support\Facades\Auth::user()) ? true : false;
-assert($isLoggedIn,"In user-setting-dropdown blade. This is only for logged in screens.  Please check for log in before renderring.")
+
+assert($isLoggedIn,"In user-setting-dropdown blade. This is only for logged in screens.  Please check for log in before renderring.");
  @endphp
 
 

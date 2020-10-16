@@ -8,6 +8,15 @@
     @foreach (\TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wranglees() as $asrMenuPackage)
         @php
         $isRouteZO = request()->routeIs($asrMenuPackage['routeIs'])  ? 1 : 0;
+
+        #$isBack = (request()->routeIs('user*') || request()->routeIs('me*') || request()->routeIs('admin*') || request()->routeIs('teams*'));
+        $isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isBackPage();
+
+        if ($isBackPage) {
+            $bgColor =  "bg-gray-100";
+        } else {
+            $bgColor =  "bg-gray-50";
+        }
         @endphp
 
         <x-tassy::nav-link
@@ -28,6 +37,6 @@
 
     @endforeach
 
-    <x-tassy::user-settings-dropdown class="pt-2"/>
+    <x-tassy::user-settings-dropdown class="pt-2 {{$bgColor}}"/>
 
 </div>

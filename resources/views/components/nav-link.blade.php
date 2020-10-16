@@ -4,8 +4,8 @@
 {{--    </x-jet-nav-link>--}}
 {{--     @props(['active'])--}}
 @php
-$isBack = (request()->routeIs('user*') || request()->routeIs('me*') || request()->routeIs('admin*') || request()->routeIs('teams*'));
-if ($isBack) {
+$isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isBackPage();
+if ($isBackPage) {
     $bgColor =  "bg-gray-100";
 } else {
     $bgColor =  "bg-gray-50";
