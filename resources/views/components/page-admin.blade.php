@@ -95,58 +95,6 @@
 
     </style>
 
-    @if(0)
-        <div class="md:hidden" x-show="open"
-             @click.away="open = false">
-            <div class="fixed inset-0 flex z-40">
-                <!--
-                  Off-canvas menu overlay, show/hide based on off-canvas menu state.
-
-                  Entering: "transition-opacity ease-linear duration-300"
-                    From: "opacity-0"
-                    To: "opacity-100"
-                  Leaving: "transition-opacity ease-linear duration-300"
-                    From: "opacity-100"
-                    To: "opacity-0"
-                -->
-                <div @click="open = false" class="fixed inset-0">
-                    <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
-                </div>
-                <!--
-                  Off-canvas menu, show/hide based on off-canvas menu state.
-
-                  Entering: "transition ease-in-out duration-300 transform"
-                    From: "-translate-x-full"
-                    To: "translate-x-0"
-                  Leaving: "transition ease-in-out duration-300 transform"
-                    From: "translate-x-0"
-                    To: "-translate-x-full"
-                -->
-                <div @click="open = false" class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800">
-                    <div class="absolute top-0 right-0 -mr-14 p-1">
-                        <button
-                            class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600"
-                            aria-label="Close sidebar">
-                            <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M6 18L18 6M6 6l12 12"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex-1 h-0 pt-3 pb-4 overflow-y-auto">
-                        <x-tassy::header.back.corner-block-inner class="pl-4"/>
-
-                    </div>
-                    <div class="flex-shrink-0 flex bg-gray-700 p-4">
-                        Mobile config section
-                    </div>
-                </div>
-                <div class="flex-shrink-0 w-14">
-                    <!-- Force sidebar to shrink to fit close icon -->
-                </div>
-            </div>
-        </div>
-    @endif
 
     <div x-data="{ open: false }">
         {{--          <div class=" inset-0 float w-screen  ">--}}
@@ -166,24 +114,8 @@
                             <x-tassy::header.back.corner-block-inner class="pl-4"/>
                             <livewire:tassy::livewire.sidenav/>
                         </div>
-                        <div class="flex-shrink-0 flex bg-gray-700 p-4">
-                            <a href="#" class="flex-shrink-0 w-full group block">
-                                <div class="flex items-center">
-                                    <div>
-                                        <img class="inline-block h-9 w-9 rounded-full"
-                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                             alt="">
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm leading-5 font-medium text-white">
-                                            Tom Cook
-                                        </p>
-                                        <p class="text-xs leading-4 font-medium text-gray-300 group-hover:text-gray-200 transition ease-in-out duration-150">
-                                            View profile
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="flex-shrink-0 flex bg-gray-700 px-4">
+                            <livewire:tassy::livewire.lowernav/>
                         </div>
                     </div>
                 </div>
