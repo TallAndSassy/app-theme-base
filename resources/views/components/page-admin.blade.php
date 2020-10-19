@@ -114,7 +114,7 @@
                             <x-tassy::header.back.corner-block-inner class="pl-4"/>
                             <livewire:tassy::livewire.sidenav/>
                         </div>
-                        <div class="flex-shrink-0 flex bg-gray-700 px-4">
+                        <div class="flex-shrink-0 flex bg-gray-700 px-4 pt-2">
                             <livewire:tassy::livewire.lowernav/>
                         </div>
                     </div>
