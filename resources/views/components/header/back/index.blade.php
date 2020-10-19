@@ -1,18 +1,19 @@
 <div>
     <div class="h-16  flex bg-gray-100">
         @if (request()->routeIs('admin*') )
-            <div class="w-13 lg:w-36 xl:w-56 px-2 pt-2 bg-gray-100 md:bg-gray-900">
-                <x-tassy::header.back.corner-block/>
-            </div>
-            <div class="hidden md:block  p-3">
-                <x-tassy::header.back.title>{{$title}}</x-tassy::header.back.title>
+{{--            <div class="w-13 lg:w-36 xl:w-56 px-2 pt-2 bg-gray-100 md:bg-gray-900">--}}
+{{--                <x-tassy::header.back.corner-block/>--}}
+{{--            </div>--}}
+            <div class="hidden sm:block p-3">
+                <x-tassy::header.back.title>{{$title}}  </x-tassy::header.back.title>
             </div>
         @else
-             <div class="w-13 lg:w-36 xl:w-56 px-2 pt-2 bg-gray-100 md:bg-gray-100">
+{{--             lg:w-36 xl:w-56--}}
+             <div class=" px-2 pt-2 lg:p-10 bg-gray-100 md:bg-gray-100">
                 <x-tassy::header.back.corner-block/>
             </div>
         @endif
-        <x-tassy::header.back.menu/>
+        <x-tassy::header.back.menu class="lg:p-10"/>
     </div>
 
     @if (request()->routeIs('admin*') )

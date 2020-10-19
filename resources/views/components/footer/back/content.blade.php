@@ -5,7 +5,7 @@
 
         <a href="http://www.tallandsassy.com" class="text-primary dim no-underline">This App</a>
         <span class="px-1">&middot;</span>
-        &copy; {{ date('Y') }} Your company name here, Inc.
+        &copy; {{ date('Y') }} Overlord Enterprises, Inc.
 
         <br>
         Trademarks, course offerings, descriptions, comments, etc., are owned by their respective posters.

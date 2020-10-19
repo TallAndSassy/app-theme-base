@@ -4,8 +4,8 @@
             ">
 
     <a href="/">
-        <span class="lg:hidden"><x-tassy::header.back.corner-block-inner-small/></span>
-        <span class="hidden lg:block">
+        <span class="sm:hidden"><x-tassy::header.back.corner-block-inner-small/></span>
+        <span class="hidden sm:block  ">
             <x-tassy::header.back.corner-block-inner/>
         </span>
     </a>

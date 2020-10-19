@@ -1,9 +1,11 @@
-<div class="
-    tassy::page-guide-components-header-back-menu app-theme-base
+<div
+    {{ $attributes->merge([
+    'class' => 'tassy::page-guide-components-header-back-menu app-theme-base
     absolute top-0 right-0  mr-4
     flex
-    bg-gray-50
-    ">
+    bg-gray-100']
+    )}}
+>
 
     @foreach (\TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wranglees() as $asrMenuPackage)
         @php
@@ -37,6 +39,6 @@
 
     @endforeach
 
-    <x-tassy::user-settings-dropdown class="pt-2 {{$bgColor}}"/>
+    <x-tassy::user-settings-dropdown class="pt-2  {{$bgColor}}"/>
 
 </div>

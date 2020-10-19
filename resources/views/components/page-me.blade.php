@@ -5,7 +5,7 @@
     <div class="flex flex-col h-screen justify-between bg-gray-100">
         <x-tassy::header.back.index title="{{$title}}"/>
         <main class="mb-auto  bg-gray-100">
-            <div class="p-10 h-full">{{$slot}}</div>
+            <div class="p-3 lg:p-10 h-full">{{$slot}}</div>
         </main>
 
         <x-tassy::footer.back.index/>
