@@ -111,10 +111,11 @@
                     <!-- Sidebar component, swap this element with another sidebar if you like -->
                     <div class="flex flex-col h-0 flex-1 bg-gray-800">
                         <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-                            <x-tassy::header.back.corner-block-inner class="pl-4"/>
-                            <livewire:tassy::livewire.sidenav/>
+                            <x-tassy::header.back.corner-block-inner class="pl-4 border-b pb-2 border-gray-700"/>
+
+                            <livewire:tassy::livewire.sidenav class="pt-4"/>
                         </div>
-                        <div class="flex-shrink-0 flex bg-gray-700 px-4 pt-2">
+                        <div class="flex-shrink-0 flex bg-gray-700 px-2 pt-1">
                             <livewire:tassy::livewire.lowernav/>
                         </div>
                     </div>
