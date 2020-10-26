@@ -6,19 +6,27 @@
     bg-gray-100']
     )}}
 >
+@php
+    if (\TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isABackPage()) {
+        $bgColor =  "bg-gray-100";
+    } elseif (\TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAFrontPage()) {
+        $bgColor =  "bg-gray-50";
+    } else {
+        $bgColor =  "bg-red-500";
+    }
+@endphp
 
     @foreach (\TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wranglees() as $asrMenuPackage)
         @php
-        $isRouteZO = request()->routeIs($asrMenuPackage['routeIs'])  ? 1 : 0;
-
-        #$isBack = (request()->routeIs('user*') || request()->routeIs('me*') || request()->routeIs('admin*') || request()->routeIs('teams*'));
-        $isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isBackPage();
-
-        if ($isBackPage) {
-            $bgColor =  "bg-gray-100";
+        if (gettype($asrMenuPackage['routeIs']) == 'object') {
+            $f = $asrMenuPackage['routeIs'];
+            $isRouteZO = $f();
+        } elseif (gettype($asrMenuPackage['routeIs']) == 'string') {
+            $isRouteZO = request()->routeIs($asrMenuPackage['routeIs'])  ? 1 : 0;
         } else {
-            $bgColor =  "bg-gray-50";
+            assert(0,__FILE__,__LINE__);
         }
+
         @endphp
 
         <x-tassy::nav-link
@@ -26,17 +34,6 @@
             pretty="{{$asrMenuPackage['name']}}"
             isActive="{{$isRouteZO}}"
           />
-{{--        <x-jet-nav-link href="{{$asrMenuPackage['url']}}" :active="$isRouteZO">--}}
-{{--            {{$asrMenuPackage['name']}}--}}
-{{--        </x-jet-nav-link>--}}
-{{--        <a id="navbarDropdown"--}}
-{{--           class="ml-8 nav-link  inline-block font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"--}}
-{{--           href="{{$asrMenuPackage['url']}}" role="button" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-{{--            <span>{{$asrMenuPackage['name']}}</span>--}}
-{{--        </a>--}}
-
-
-
     @endforeach
 
     <x-tassy::user-settings-dropdown class="pt-2  {{$bgColor}}"/>

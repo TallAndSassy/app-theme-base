@@ -7,7 +7,7 @@
 <img class='w-5  -mt-4 inline-block mr-0 ' id='theBottomSchoolChaseLogo' src='{{asset('/img/logos/applogolod.png')}}'>
 <div class="inline-block leading-4">
     @php
-    if (\TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAdminPage() ) {
+    if (\TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAnAdminPage() ) {
         $textColor = 'text-gray-200';
     } else {
         $textColor = 'text-gray-800';

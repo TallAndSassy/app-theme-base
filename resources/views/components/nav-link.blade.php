@@ -4,7 +4,7 @@
 {{--    </x-jet-nav-link>--}}
 {{--     @props(['active'])--}}
 @php
-$isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isBackPage();
+$isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isABackPage();
 if ($isBackPage) {
     $bgColor =  "bg-gray-100";
 } else {
