@@ -14,6 +14,57 @@
     } else {
         $bgColor =  "bg-red-500";
     }
+
+
+// =========================== Boot Stuff  =============================================================================
+/*  Build back-end menu entries
+    This should almost definitely live somewhere else
+
+$isBackPage = \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isABackPage();
+
+if ($isBackPage || app('request')->ajax() ) {
+    \TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wrangleMe(
+        "home",
+        [
+            'name' => __('tassy::PageGuide.FrontLinkText'),
+            "url" => "/",
+            "classes" => "",
+            "routeIs" => fn () => \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAFrontPage(),
+        ]
+    );
+
+    \TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wrangleMe(
+        "admin",
+        [
+            'name' => __('tassy::PageGuide.AdminLinkText'),
+            "url" => "/admin",
+            "classes" => "",
+            "routeIs" => fn () => \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAnAdminPage(),
+        ]
+    );
+
+    \TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wrangleMe(
+        "me",
+        [
+            'name' => __('tassy::PageGuide.MeLinkText'),
+            "url" => "/me",
+            "classes" => "",
+            "routeIs" => fn () => \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAMePage(),
+
+        ]
+    );
+} else {
+      \TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wrangleMe(
+        "me",
+        [
+            'name' => __('tassy::PageGuide.Not a back page'),
+            "url" => "/me",
+            "classes" => "",
+            "routeIs" => fn () => \TallAndSassy\PageGuide\Http\Controllers\PageGuideController::isAMePage(),
+
+        ]
+    );
+}*/
 @endphp
 
     @foreach (\TallAndSassy\PageGuide\PageGuideMenuWranglerBack::wranglees() as $asrMenuPackage)

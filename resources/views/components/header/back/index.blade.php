@@ -13,7 +13,8 @@
                 <x-tassy::header.back.corner-block/>
             </div>
         @endif
-        <x-tassy::header.back.menu class="lg:p-10"/>
+{{--        <x-tassy::header.back.menu class="lg:p-10"/>--}}
+        @include('tassy::me.menu', ['class'=>"lg:pt-1"])
     </div>
 
     @if (request()->routeIs('admin*') )
