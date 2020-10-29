@@ -14,8 +14,8 @@
     }
     @endphp
 
-<span class="no-underline dim font-bold text-90  {{$textColor}} pl-1  block">SubSite</span>
-<span class="no-underline dim text-90  text-sm {{$textColor}} pl-1">by Overlord </span>
+<span class="no-underline dim font-bold text-90  {{$textColor}} pl-1  block"><x-tassy::subsite-name/></span>
+<span class="no-underline dim text-90  text-sm {{$textColor}} pl-1">by <x-tassy::app-name/> </span>
 </div>
 
 
