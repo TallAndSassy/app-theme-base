@@ -11,7 +11,7 @@ use TallAndSassy\AppThemeBase\Http\Controllers\AppThemeBaseController;
 class AppThemeBaseServiceProvider extends ServiceProvider
 {
     public static string $blade_prefix = "tassy"; #tassy is a template term
-    
+
     public function boot()
     {
         if ($this->app->runningInConsole()) {
@@ -42,7 +42,7 @@ class AppThemeBaseServiceProvider extends ServiceProvider
             }
 
              $this->publishes([
-                 __DIR__.'/../resources/public' => public_path('eleganttechnologies/grok'),
+                 __DIR__.'/../resources/public' => public_path('/'),
                 ], ['public']);
 
             // Publishing assets.
@@ -140,7 +140,7 @@ class AppThemeBaseServiceProvider extends ServiceProvider
             \ElegantTechnologies\Grok\GrokWrangler::grokMe(static::class, 'TallAndSassy', 'app-theme-base', 'resources/views/grok', 'tassy');//tassy gets macro'd out
             Route::get('/grok/TallAndSassy/AppThemeBase', fn () => view('tassy::grok/index'));
         }
-        
+
         // TODO: Register your livewire components that live in this package here:
         # \Livewire\Livewire::component('tassygroklivewirejet::a-a-nothing',  \TallAndSassy\GrokLivewireJet\Components\DemoUiChunks\AANothing::class);
         // TODO: Add your own other boot related stuff here...

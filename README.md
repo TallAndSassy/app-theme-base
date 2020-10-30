@@ -24,6 +24,12 @@ You can install the package via composer:
 composer require tallandsassy/app-theme-base
 ```
 
+You can publish the sample images with:
+```bash
+php artisan vendor:publish --provider="TallAndSassy\AppThemeBase\AppThemeBaseServiceProvider" --tag="public"
+```
+
+
 You can publish and run the migrations with:
 
 ```bash
