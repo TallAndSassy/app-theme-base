@@ -14,7 +14,7 @@
                     <br>
                     You can customize it by making a copy and placing it in resorces/views/vendor/front/index.php
                     <br>
-                    See <a href="/grok/TallAndSassy/PageGuide/">Grok</a>
+                    See <a href="/grok">Grok</a>
                 </div>
             </div>
 
