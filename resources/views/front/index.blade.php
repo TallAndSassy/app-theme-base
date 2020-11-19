@@ -12,7 +12,7 @@
                 <div class="-mt-4 text-lg text-gray-400 pb-4 border rounded shadow text-left p-4">This file is in
                     vendor/tallandsassy/app-theme-base/resources/views/front/index.blade.php
                     <br>
-                    You can customize it by making a copy and placing it in resorces/views/vendor/front/index.php
+                    You can customize it by making a copy and placing it in resorces/views/vendor/front/index.blade.php
                     <br>
                     See <a href="/grok">Grok</a>
                 </div>

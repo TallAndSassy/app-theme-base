@@ -48,6 +48,12 @@ class AppThemeBaseServiceProvider extends ServiceProvider
             $this->publishes([
                  __DIR__.'/../resources/views/auth' => resource_path('/views/auth'),
                 ], ['views.auth']);
+            $this->publishes([
+                 __DIR__.'/../resources/views/profile' => resource_path('/views/profile'),
+                ], ['views.profile']);
+            $this->publishes([
+                 __DIR__.'/../resources/views/teams' => resource_path('/views/teams'),
+                ], ['views.teams']);
 
             // Publishing assets.
             /*$this->publishes([
